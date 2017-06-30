@@ -1,0 +1,47 @@
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>, <RegexURLPattern activo-list ^activos/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>, <RegexURLPattern activo-detail ^activos/(?P<pk>[0-9]+)/$>]], 'path': 'api/v1/activo'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /api/v1/activo
+"GET /api/v1/activo HTTP/1.1" 404 2579
