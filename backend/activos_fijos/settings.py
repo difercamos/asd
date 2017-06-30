@@ -15,6 +15,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'floppyforms',
     'activos',
 ]
 
@@ -50,7 +52,7 @@ WSGI_APPLICATION = 'activos_fijos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': os.environ['NAME'],
         'USER': os.environ['USER'],
         'PASSWORD': os.environ['PASSWORD'],

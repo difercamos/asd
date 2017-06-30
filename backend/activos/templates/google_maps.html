@@ -1,0 +1,17 @@
+{% extends "floppyforms/gis/google.html" %}
+
+{% block options %}
+{{ block.super }}
+options['base_layer'] = new OpenLayers.Layer.Google(
+  "Activos Fijos",
+  {
+    type: google.maps.MapTypeId.HYBRID
+  },
+  {
+    numZoomLevels: 20,
+    units: 'm'
+  });
+options['default_lat'] = 4.1361983208836
+options['default_lon'] = -73.6071653091629
+options['default_zoom'] = 13
+{% endblock %}
