@@ -45,3 +45,2530 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
 Not Found: /api/v1/activo
 "GET /api/v1/activo HTTP/1.1" 404 2579
+(0.034) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.004) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.020) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gicjt6j5vt7k8dv0nekvhm9tbroabdbh' AND "django_session"."expire_date" > '2017-06-30T23:23:15.532794+00:00'::timestamptz); args=('gicjt6j5vt7k8dv0nekvhm9tbroabdbh', datetime.datetime(2017, 6, 30, 23, 23, 15, 532794, tzinfo=<UTC>))
+(0.006) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'LOGOUT_URL' in template 'rest_framework_swagger/index.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'LOGOUT_URL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'LOGOUT_URL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'LOGOUT_URL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [LOGOUT_URL] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'csrf_token\': <SimpleLazyObject: \'JTYXSiV89soGgmRIYbBvnQBFcwidCFAoSjKSzEu5YN0PosROKNM5ZHmIIqograqN\'>, \'request\': <rest_framework.request.Request object at 0x113cda550>, \'user\': <SimpleLazyObject: <User: admin>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x113d297b8>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x113c7b0f0>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}}, {}, {\'view\': <rest_framework_swagger.views.get_swagger_view.<locals>.SwaggerSchemaView object at 0x113c7b518>, \'args\': (), \'kwargs\': {}, \'request\': <rest_framework.request.Request object at 0x113cda550>, \'response\': <Response status_code=200, "text/html; charset=utf-8">, \'USE_SESSION_AUTH\': True, \'LOGIN_URL\': \'/accounts/login/\', \'drs_settings\': \'{"apisSorter": null, "docExpansion": null, "jsonEditor": false, "operationsSorter": null, "showRequestHeaders": false, "supportedSubmitMethods": ["get", "post", "put", "delete", "patch"]}\'}, {\'block\': <Block Node: header. Contents: [<TextNode: "\\n<div id=\'header\'>\\n  <div">, <Block Node: logo. Contents: [<TextNode: \'\\n      <a id="logo" href=\'>, <django.templatetags.static.StaticNode object at 0x113d43e48>, <TextNode: \'" /><span class="logo__ti\'>]>, <TextNode: "\\n    <form id=\'api_select">, <IfNode>, <TextNode: \'\\n\\n      \'>, <IfNode>, <TextNode: "\\n      <div id=\'auth_cont">]>}]'
+"GET / HTTP/1.1" 200 4110
+"GET /static/rest_framework_swagger/css/reset.css HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/object-assign-pollyfill.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/css/screen.css HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/jquery-1.8.0.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/jquery.slideto.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/css/typography.css HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/jquery.wiggle.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/jquery.ba-bbq.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/handlebars-2.0.0.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/lodash.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/js-yaml.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/backbone-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/highlight.9.1.0.pack.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/swagger-ui.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/jsoneditor.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/marked.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/lib/swagger-oauth.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/init.js HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/images/logo_small.png HTTP/1.1" 304 0
+"GET /static/rest_framework_swagger/css/print.css HTTP/1.1" 304 0
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gicjt6j5vt7k8dv0nekvhm9tbroabdbh' AND "django_session"."expire_date" > '2017-06-30T23:23:16.006253+00:00'::timestamptz); args=('gicjt6j5vt7k8dv0nekvhm9tbroabdbh', datetime.datetime(2017, 6, 30, 23, 23, 16, 6253, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /?format=openapi HTTP/1.1" 200 4676
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gicjt6j5vt7k8dv0nekvhm9tbroabdbh' AND "django_session"."expire_date" > '2017-06-30T23:23:21.071141+00:00'::timestamptz); args=('gicjt6j5vt7k8dv0nekvhm9tbroabdbh', datetime.datetime(2017, 6, 30, 23, 23, 21, 71141, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.095) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113dac3c8>}"
+(0.003) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" LIMIT 1000; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 14731
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-1.12.4.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2288
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'gicjt6j5vt7k8dv0nekvhm9tbroabdbh' AND "django_session"."expire_date" > '2017-06-30T23:25:40.034461+00:00'::timestamptz); args=('gicjt6j5vt7k8dv0nekvhm9tbroabdbh', datetime.datetime(2017, 6, 30, 23, 25, 40, 34461, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.075) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'date', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in "{'base_template': 'input.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in "{'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in "{'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x113def4e0>}"
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" LIMIT 1000; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 14731
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'v1/activos/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'v1/activos/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>"
+Not Found: /v1/activos/
+"GET /v1/activos/ HTTP/1.1" 404 2288
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'api-v1/activos/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern None ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^api/v1/$>], [<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>]], 'path': 'api-v1/activos/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dik/virtualenvs/activos_fijos/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'activos.urls' from '/Users/dik/django/activos_fijos/backend/activos/urls.py'> (None:activos) ^api/v1/>"
+Not Found: /api-v1/activos/
+"GET /api-v1/activos/ HTTP/1.1" 404 2300
+(0.055) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.063) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.015) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.014) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.015) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.026) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.017) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.012) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.011) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.012) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.015) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.021) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.013) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.014) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+"GET / HTTP/1.1" 200 4001
+"GET /static/rest_framework_swagger/css/reset.css HTTP/1.1" 200 1066
+"GET /static/rest_framework_swagger/css/typography.css HTTP/1.1" 200 452
+"GET /static/rest_framework_swagger/css/screen.css HTTP/1.1" 200 48986
+"GET /static/rest_framework_swagger/css/print.css HTTP/1.1" 200 46473
+"GET /static/rest_framework_swagger/lib/object-assign-pollyfill.js HTTP/1.1" 200 692
+"GET /static/rest_framework_swagger/lib/jquery.slideto.min.js HTTP/1.1" 200 369
+"GET /static/rest_framework_swagger/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 4119
+"GET /static/rest_framework_swagger/lib/jquery.wiggle.min.js HTTP/1.1" 200 762
+"GET /static/rest_framework_swagger/lib/handlebars-2.0.0.js HTTP/1.1" 200 48517
+"GET /static/rest_framework_swagger/lib/jquery-1.8.0.min.js HTTP/1.1" 200 92555
+"GET /static/rest_framework_swagger/lib/backbone-min.js HTTP/1.1" 200 20390
+"GET /static/rest_framework_swagger/lib/js-yaml.min.js HTTP/1.1" 200 43621
+"GET /static/rest_framework_swagger/lib/lodash.min.js HTTP/1.1" 200 52646
+"GET /static/rest_framework_swagger/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 1025
+"GET /static/rest_framework_swagger/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 11037
+"GET /static/rest_framework_swagger/lib/swagger-oauth.js HTTP/1.1" 200 11615
+"GET /static/rest_framework_swagger/init.js HTTP/1.1" 200 1434
+"GET /static/rest_framework_swagger/lib/marked.js HTTP/1.1" 200 28156
+"GET /static/rest_framework_swagger/images/logo_small.png HTTP/1.1" 200 770
+"GET /static/rest_framework_swagger/swagger-ui.min.js HTTP/1.1" 200 289384
+"GET /static/rest_framework_swagger/lib/jsoneditor.min.js HTTP/1.1" 200 130042
+"GET /?format=openapi HTTP/1.1" 200 4676
+"GET /static/rest_framework_swagger/images/favicon-32x32.png HTTP/1.1" 200 1654
+(0.014) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.010) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.012) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.015) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.014) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.012) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342
+(0.010) SELECT "activos_activo"."id", "activos_activo"."nombre", "activos_activo"."descripcion", "activos_activo"."tipo", "activos_activo"."serial", "activos_activo"."numero_interno", "activos_activo"."peso", "activos_activo"."alto", "activos_activo"."ancho", "activos_activo"."largo", "activos_activo"."valor_compra", "activos_activo"."fecha_compra", "activos_activo"."estado", "activos_activo"."color", "activos_activo"."ubicacion", "activos_activo"."usuario_id" FROM "activos_activo"; args=()
+"GET /api/v1/activos/ HTTP/1.1" 200 342

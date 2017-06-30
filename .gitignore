@@ -1,2 +1,5 @@
 *.pyc
 backend/static/
+frontend/activos/tmp/
+frontend/activos/dist/
+frontend/activos/node_modules/
