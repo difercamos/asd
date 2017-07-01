@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('activo', function() {
+    this.route('create');
+    this.route('edit', {path: '/activo/edit/:id'});
+  });
 });
 
 export default Router;

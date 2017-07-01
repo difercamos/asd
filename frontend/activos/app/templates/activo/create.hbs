@@ -1,0 +1,64 @@
+{{outlet}}
+<div class="row col-md-4 col-md-offset-4">
+  <form>
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      {{input type="text" class="form-control" value=nombre}}
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      {{textarea class="form-control" rows="5" id="descripcion" value=descripcion}}
+    </div>
+    <div class="form-group">
+      <label for="tipo">Tipo</label>
+      {{input type="text" class="form-control" value=tipo}}
+    </div>
+    <div class="form-group">
+      <label for="serial">Serial</label>
+      {{input type="text" class="form-control" value=serial}}
+    </div>
+    <div class="form-group">
+      <label for="numero_interno">Numero Interno</label>
+      {{input type="text" class="form-control" value=numero_interno}}
+    </div>
+    <div class="form-group">
+      <label for="Peso">Peso</label>
+      {{input type="text" class="form-control" value=peso}}
+    </div>
+    <div class="form-group">
+      <label for="alto">Alto</label>
+      {{input type="text" class="form-control" value=alto}}
+    </div>
+    <div class="form-group">
+      <label for="largo">Largo</label>
+      {{input type="text" class="form-control" value=largo}}
+    </div>
+    <div class="form-group">
+      <label for="largo">Ancho</label>
+      {{input type="text" class="form-control" value=ancho}}
+    </div>
+    <div class="form-group">
+      <label for="valor_compra">Valor Compra</label>
+      {{input type="text" class="form-control" value=valor_compra}}
+    </div>
+    <div class="form-group">
+      <label for="fecha_compra">Fecha Compra</label>
+      {{input type="text" class="form-control" placeholder="aaaa-mm-dd" value=fecha_compra}}
+    </div>
+    <div class="form-group">
+      <select class="selectpicker" onchange={{action 'selectEstado' value='target.value'}}>
+        <option value=""></option>
+        <option value="A">Activo</option>
+        <option value="B">Dado de Baja</option>
+        <option value="E">En Reparacion</option>
+        <option value="D">Disponible</option>
+        <option value="AS">Asignado</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      {{input type="text" class="form-control" value=color}}
+    </div>
+    <button type="submit" class="btn btn-default" {{action 'createActivo'}}>Crear</button>
+  </form>
+</div>

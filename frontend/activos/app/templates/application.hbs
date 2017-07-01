@@ -1,1 +1,10 @@
-{{outlet}}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Listado de Actvos</div>
+  <div class="panel-body">
+    <p>Activos de ASD</p>
+   {{#link-to "activo.create" href="" type="button" class="btn btn-success"}}Crear Activo{{/link-to}}
+  </div>
+  {{outlet}}
+
+</div>

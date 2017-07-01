@@ -1,6 +1,48 @@
-hola
-{{#each model as |activo|}}
-  <h1>{{activo.nombre}}</h1>
-{{/each}}
-
 {{outlet}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Tipo</th>
+      <th>Serial</th>
+      <th>Numero Interno</th>
+      <th>Peso</th>
+      <th>Alto</th>
+      <th>Ancho</th>
+      <th>Largo</th>
+      <th>Valor Compra</th>
+      <th>Fecha Compra</th>
+      <th>Estado</th>
+      <th>Color</th>
+      <th>ubicacion</th>
+      <th>Usuario</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each model as |activo| }}
+      <tr>
+        <td>{{activo.nombre}}</td>
+        <td>{{activo.descripcion}}</td>
+        <td>{{activo.tipo}}</td>
+        <td>{{activo.serial}}</td>
+        <td>{{activo.numero_interno}}</td>
+        <td>{{activo.peso}}</td>
+        <td>{{activo.alto}}</td>
+        <td>{{activo.ancho}}</td>
+        <td>{{activo.largo}}</td>
+        <td>{{activo.valor_compra}}</td>
+        <td>{{activo.fecha_compra}}</td>
+        <td>{{activo.estado}}</td>
+        <td>{{activo.color}}</td>
+        <td>{{activo.ubicacion.coordinates}}</td>
+        <td>{{activo.usuario}}</td>
+        <td>{{#link-to "activo.edit" activo.id type="button" class="btn btn-info" }}Editar{{/link-to}}</td>
+        <td><button href="" type="button" class="btn btn-danger" {{action 'deleteActivo' activo.id}}>Eliminar</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

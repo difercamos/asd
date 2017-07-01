@@ -20,13 +20,17 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     'django_filters',
     'floppyforms',
+    'corsheaders',
     'rest_framework_swagger',
     'activos',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
