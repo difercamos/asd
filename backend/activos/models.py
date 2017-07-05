@@ -23,7 +23,17 @@ class Activo(models.Model):
     largo = models.FloatField(blank=True, null=True)
     valor_compra = models.FloatField()
     fecha_compra = models.DateField()
+    fecha_baja = models.DateField(blank=True, null=True)
     estado = models.CharField(max_length=20, choices=estado_choices)
     color = models.CharField(max_length=50, blank=True, null=True)
     ubicacion = models.PointField(blank=True, null=True)
     usuario = models.ForeignKey(User, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        if not self.fecha_baja is None:
+            if self.fecha_baja > self.fecha_compra:
+                super(Activo, self).save(*args, **kwargs)
+            else:
+                print("error")
+        else:
+            super(Activo, self).save(*args, **kwargs)
